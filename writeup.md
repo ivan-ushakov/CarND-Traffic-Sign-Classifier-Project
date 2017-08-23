@@ -1,6 +1,6 @@
 **Traffic Sign Recognition** 
 
-**Build a Traffic Sign Recognition Project**
+***Build a Traffic Sign Recognition Project***
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -35,11 +35,11 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing distribution of classes in the training, validation and test set.
 
-![alt text][image1]
+![image1]
 
-![alt text][image2]
+![image2]
 
-![alt text][image3]
+![image3]
 
 ***Design and Test a Model Architecture***
 
@@ -47,8 +47,8 @@ As a first step, I decided to convert the images to grayscale because color is n
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image4]
-![alt text][image5]
+![image4]
+![image5]
 
 After that I normalized the image data with Tensorflow standardization function to have zero mean and unit norm.
 
@@ -79,13 +79,12 @@ My final model results were:
 * test set accuracy of 0.939
 
 I started with LeNet model and my test set accuracy was lower then 0.93. I decided to add dropout layer after each fully connected layer because this helps with overfitting and I used AlexNet as example.
- 
 
 ***Test a Model on New Images***
 
 I decided to use eight images.
 
-![alt text][image6]
+![image6]
 
 Speed limit (30km/h), Speed limit (60km/h) and Speed limit (70km/h) images were selected because they are very close to each other (geometry and colors) and I want to check how model works with such images.
 
@@ -192,12 +191,14 @@ End of all speed and passing limits ts_8.jpg
 Even for Double curve image where error was made. I guess that because all images have very low quality it is hard to distinguish small elements like Children crossing and Double curve have. Also all images (including my images from web) were made by scaling down big image to 32x32 and this also introduce artifacts. 
 
 
-*** (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)***
+***Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)***
 
 Here is how feature maps looks like when we use first image from test set.
 
-![alt text][image7]
+![image7]
 
-![alt text][image8]
+First convolution layer extracts information about geometry details like round border. 
 
-First convolution layer extracts information about geometry details like round border. It is hard to say something about second convolution layer because feature maps looks abstract for me.
+![image8]
+
+It is hard to say something about second convolution layer because feature maps looks abstract for me.
